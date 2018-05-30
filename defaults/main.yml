@@ -1,0 +1,6 @@
+---
+# defaults file for setup
+
+setup_reboot: no
+setup_timezone: America/Los_Angeles
+setup_locale: en_US.UTF-8

@@ -1,0 +1,12 @@
+---
+# tasks file for setup
+
+- import_tasks: setup.yml
+  become: yes
+  tags: [setup]
+
+# recommended to reboot new servers after upgrade for kernel change
+- import_tasks: reboot.yml
+  become: yes
+  tags: [setup, setup_reboot]
+  
