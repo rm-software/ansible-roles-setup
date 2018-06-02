@@ -40,3 +40,12 @@
     regexp: .*
     line: '{{ inventory_hostname }}'
     create: yes
+  tags: setup_hostname
+
+- name: Update /etc/hosts file
+  lineinfile:
+    dest: /etc/hosts
+    regexp: '^.* {{ inventory_hostname }}$'
+    line: '{{ ansible_default_ipv4.address }} {{ inventory_hostname }}'
+    create: yes
+  tags: setup_hostname
