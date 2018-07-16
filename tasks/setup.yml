@@ -1,5 +1,10 @@
 ---
 
+- name: Add universe repo
+  apt_repository:
+    repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} universe
+  when: setup_universe_repo
+  
 # to just apt upgrade, --tags=apt_upgrade[,reboot]
 - name: Upgrade apt packages
   apt:

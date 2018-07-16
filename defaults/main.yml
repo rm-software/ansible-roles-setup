@@ -4,6 +4,7 @@
 setup_reboot: no
 setup_timezone: America/Los_Angeles
 setup_locale: en_US.UTF-8
+setup_universe_repo: no
 
 # Ssh authorized hosts
 setup_authorized_host_keys: []
